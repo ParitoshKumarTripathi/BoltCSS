@@ -1,0 +1,259 @@
+@font-face {
+    font-family: IconFont;
+    src: url('material-icons-outlined.woff2') format('woff2');
+}
+
+*:focus {
+    outline: none;
+}
+
+:root {
+    --baseTextSize: 20px;
+    --mediumTextSize: 16px;
+    --font: "Inter", sans-serif;
+    --iconFont: "IconFont";
+    --homeColor: #ffffff;
+    --bgcolor: #d1eaff;
+    --darkbgcolor: #bde0fe;
+    --clickColor: #bbd4eb;
+    --mainColor:#255C99;
+    --selectbgcolor: #dddddd;
+    --cornerRadius: 1rem;
+    --cardMaxWidth: 30%;
+    --progressBarHeight: 0.5rem;
+    --menuBgColor: #e9e9ed;
+}
+
+html {
+  font-size: var(--baseTextSize);
+  font-family: var(--font);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: dotted;
+    border-bottom-color: var(--selectbgcolor);
+    background-color: var(--homeColor);
+    z-index: 99;
+    position: fixed;
+    inset: 0 0 auto 0;
+    padding: 0.5rem 1rem 0.5rem;
+}
+
+logo {
+    display: block;
+}
+
+logo span {
+  margin: 0.25em;
+}
+
+a {
+    color: var(--mainColor);
+}
+
+nav a {
+    text-decoration: none;
+    margin: 0 0.5rem 0;
+    border-radius: var(--cornerRadius);
+    padding: 0.5em;
+}
+
+nav a:hover {
+    background-color: var(--menuBgColor);
+}
+
+nav a:active {
+    background-color: var(--selectbgcolor);
+}
+
+main {
+    margin-top: 5rem;
+    padding: 0.5rem 1rem 0.5rem;
+}
+
+section {
+    margin-bottom: 2.5rem;
+}
+
+button {
+    font-family: var(--font);
+    font-size: var(--baseTextSize);
+    padding: 1rem;
+    border: none;
+    border-radius: var(--cornerRadius);
+    background-color: var(--bgcolor);
+}
+
+button:hover {
+    background-color: var(--darkbgcolor);
+    cursor: pointer;
+}
+
+button:active {
+    background-color: var(--clickColor);
+}
+
+icon-button {
+    display: inline-flex;
+    aspect-ratio : 1 / 1;
+    font-family: var(--iconFont);
+    padding: 0.5rem;
+    border-radius: var(--cornerRadius);
+}
+
+icon-button:hover {
+    cursor: pointer;
+    background-color: var(--menuBgColor);
+}
+
+icon-button:active {
+    background-color: var(--selectbgcolor);
+}
+
+card {
+    display: block;
+    background-color: var(--bgcolor);
+    backdrop-filter: blur(10px);
+    max-width: var(--cardMaxWidth);
+    border-radius: var(--cornerRadius);
+    padding: 0.05rem 1rem 0.05rem;
+}
+
+card:hover {
+    cursor: pointer;
+    background-color: var(--darkbgcolor);
+}
+
+card:active {
+    background-color: var(--clickColor);
+}
+
+progress {
+    border: none;
+    border-radius: var(--cornerRadius);
+    background-color: var(--bgcolor);
+    overflow: hidden;
+    height: var(--progressBarHeight);
+}
+
+progress::-webkit-progress-bar {
+    background-color: var(--bgcolor);
+}
+
+progress::-webkit-progress-value {
+    background-color: var(--mainColor);
+}
+
+progress::-moz-progress-bar {
+    background-color: var(--mainColor);
+}
+
+input[type="text"] {
+    border: 1px var(--selectbgcolor) solid;
+    font-family: var(--font);
+    font-size: var(--baseTextSize);
+    border-radius: var(--cornerRadius);
+    padding: 0.5rem;
+}
+
+input[type="text"]:focus {
+    border: 2px var(--mainColor) solid;
+}
+
+input[type="checkbox"] {
+    display: block;
+    height: 1rem;
+    width: 1rem;
+}
+
+input[type="radio"] {
+    display: block;
+    height: 1rem;
+    width: 1rem;
+}
+
+select {
+    font-family: var(--font);
+    font-size: var(--baseTextSize);
+    border-radius: var(--cornerRadius);
+    background-color: var(--menuBgColor);
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    padding: 0.5rem;
+}
+
+select:active {
+    background-color: var(--selectbgcolor);
+}
+
+select:focus {
+    border: 2px var(--mainColor) solid;
+}
+
+textarea {
+    border: 1px var(--selectbgcolor) solid;
+    font-family: var(--font);
+    font-size: var(--baseTextSize);
+    border-radius: var(--cornerRadius);
+    padding: 0.5rem;
+}
+
+textarea:focus {
+    border: 2px var(--mainColor) solid;
+}
+
+row {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1em;
+}
+
+column {
+    display: flex;
+    flex-flow: column wrap;
+    flex-direction: column;
+    gap: 1em;
+}
+
+footer {
+    border-top: dotted;
+    text-align: center;
+    padding: 0.5em;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+      flex-direction: column;
+      z-index: 0;
+      position: inherit;
+      inset: none;
+    }
+
+    main {
+      margin-top: 0;
+    }
+
+    card {
+      max-width: none;
+    }
+}
+
+.material-icons {
+    font-family: var(--iconFont);
+    margin-top: -0.1em; /*FIX FOR GOOGLE'S MATERIAL ICONS BEING LOWERED A BIT*/
+}
+
+.medium {
+    padding: 0.8em;
+    font-size: var(--mediumTextSize);
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

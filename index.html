@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolt CSS</title>
+    <!--Inter Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!--CSS Stylesheet-->
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+
+    <header>
+      <logo>
+        <p><span class="material-icons">bolt</span>Bolt CSS</p>
+      </logo>
+      <nav>
+        <a href="#getStarted">Get Started</a>
+        <a href="#about">About</a>
+        <a style="text-decoration: none; padding: 0;"><icon-button><span class="material-icons">dark_mode</span></icon-button></a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="basicComponents">
+        <h1>Basic Components</h1>
+
+<row>
+        <div>
+        <h3>Text Button</h3>
+        <input type="text" value="<button>Click Me!</button>">
+        <icon-button><span class="material-icons">content_copy</span></icon-button><br><br>
+        <button>Click Me!</button>
+        </div>
+
+        <div>
+        <h3>Icon Button</h3>
+        <input type="text" value='<icon-button><span class="material-icons">search</span></icon-button>'>
+        <icon-button><span class="material-icons">content_copy</span></icon-button><br><br>
+        <icon-button><span class="material-icons">search</span></icon-button>
+        </div>
+
+        <div>
+        <h3>Card</h3>
+        <textarea type="text" rows="4" cols="24">
+<card>
+    <h4>Card Title</h4>
+    <p>Card Contents</p>
+</card></textarea>
+        <icon-button><span class="material-icons">content_copy</span></icon-button><br><br>
+        <card>
+          <h4>Card Title</h4>
+          <p>Card contents. Lorem ipsum dolor co la isiat. Uno la chela marcelle. Quadro una cento le parthy.</p>
+        </card>
+        </div>
+
+        <div>
+        <h3>Progress Bar</h3>
+        <input type="text" value='<progress value="50" max="100">50%</progress>'>
+        <icon-button><span class="material-icons">content_copy</span></icon-button><br><br>
+        <progress value="50" max="100">50%</progress>
+        </div>
+
+        <div>
+        <h3>Text Input Box</h3>
+        <input type="text" value='<input type="text" placeholder="Hi this is a text input box!">'>
+        <icon-button><span class="material-icons">content_copy</span></icon-button><br><br>
+        <input type="text" placeholder="Hi this is a text input box!">
+        </div>
+
+        <div>
+        <h3>Menu</h3>
+        <p>Used to select an option from a list of items.</p>
+        <textarea type="text" rows="6" cols="24">
+<select>
+    <option>Volvo</option>
+    <option>Saab</option>
+    <option>Mercedes</option>
+    <option>Audi</option>
+</select></textarea>
+        <icon-button><span class="material-icons">content_copy</span></icon-button><br><br>
+        <select>
+          <option>Volvo</option>
+          <option>Saab</option>
+          <option>Mercedes</option>
+          <option>Audi</option>
+        </select>
+        </div>
+
+        <div>
+        <h3>Row</h3>
+        <input type="text" value='<row></row>'>
+        <icon-button><span class="material-icons">content_copy</span></icon-button><br><br>
+        <row style="justify-content: center;">
+          <card><p>Bolt CSS made my site 1000% faster!</p></card>
+          <card><p>Bolt CSS is just amazing!</p></card>
+          <card>
+            <p>It streamlines my flow, that I can focus on the idea not the site.</p>
+            <p>-Chen</p>
+          </card>
+          <card><p>Game changer!</p></card>
+          <card><p>What a product man! Hats off to the team!</p></card>
+          <card>
+            <p>Its just so simple yet so better.</p>
+            <p>-Kaytlin</p>
+          </card>
+          <card><p>Truly wow!</p></card>
+          <card><p>I would have this on all my sites now.</p></card>
+          <card>
+            <p>My life just got way better.</p>
+            <p>-John</p>
+          </card>
+          <card>
+            <p>How is this that FAST?!</p>
+            <p>-Alice</p>
+          </card>
+        </row>
+        <br>
+        <center>
+        <b><u><p>You make us what we are today!</p></u></b>
+        </center>
+        </div>
+
+      </section>
+      <section>
+        <h1>Under Development Components</h1>
+
+        <h3>Check Box</h3>
+        <p>To select multiple options.</p>
+        <input type="checkbox">
+
+        <h3>Radio Button</h3>
+        <p>Used when has to opt for a single choice.</p>
+        <input type="radio">
+
+        <h3>Switch</h3>
+        <p>Helps toggle on/off state, commonly used in web app settings.</p>
+
+        <h3>Time Picker</h3>
+        <p>Used in reminder apps to notify precisely at that time and to schedule and choose a particular time.</p>
+
+        <h3>Date Picker</h3>
+        <p>Helps to select date. For example, Used while selecting Date of Birth while filling forms.</p>
+
+        <h3>Side Bar</h3>
+        <p>A sidebar helps quickly navigate through numerous pages on a single page.</p>
+
+        <h3>Chips</h3>
+        <chip></chip>
+        <h3>Dialogs</h3>
+        <h3>Floating Action Button</h3>
+        <h3>Table</h3>
+      </section>
+      <section id="customise">
+        <h1>Customise</h1>
+        <p>Bolt CSS offers great flexibility for customisation, choose own color set, font and icons.</p>
+        <h3>Hue</h3>
+        <h3>Font</h3>
+        <h3>Icons</h3>
+      </section>
+      <section id="getStarted">
+        <h1>Get Started</h1>
+        <p>Download <a href="#">this</a> css file and add it to your project. See Documentation for each component <a href="#basicComponents">here</a>.</p>
+      </section>
+      <section id="about">
+        <h1>About</h1>
+        <p>Bolt CSS is a fast, lightweight and responsive css for your web app/site. Based on latest <a href="https://m3.material.io/">Material UI 3</a> design.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2024 Paritosh Kumar Tripathi. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
