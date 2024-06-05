@@ -6,5 +6,5 @@ Bolt CSS is a fast, lightweight, and responsive CSS framework for your web app/s
 
 ```html
 <!-- BOLT CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ParitoshKumarTripathi/BoltCSS/styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ParitoshKumarTripathi/BoltCSS@latest/styles.css">
 ```
