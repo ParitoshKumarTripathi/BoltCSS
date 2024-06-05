@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!--Material Symbols variable font-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!--CSS Stylesheet-->
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -15,12 +17,12 @@
 
     <header>
       <logo>
-        <p><span class="material-icons">bolt</span>Bolt CSS</p>
+        <p class="center"><span class="material-symbols-outlined">bolt</span>Bolt CSS</p>
       </logo>
       <nav>
         <a href="#getStarted">Get Started</a>
         <a href="#about">About</a>
-        <a style="text-decoration: none; padding: 0;"><icon-button><span class="material-icons">dark_mode</span></icon-button></a>
+        <icon-button><span class="material-symbols-outlined">dark_mode</span></icon-button>
       </nav>
     </header>
 
@@ -32,15 +34,15 @@
         <div>
         <h3>Text Button</h3>
         <input type="text" value="<button>Click Me!</button>">
-        <icon-button><span class="material-icons">content_copy</span></icon-button><br><br>
+        <icon-button><span class="material-symbols-outlined">content_copy</span></icon-button><br><br>
         <button>Click Me!</button>
         </div>
 
         <div>
         <h3>Icon Button</h3>
-        <input type="text" value='<icon-button><span class="material-icons">search</span></icon-button>'>
-        <icon-button><span class="material-icons">content_copy</span></icon-button><br><br>
-        <icon-button><span class="material-icons">search</span></icon-button>
+        <input type="text" value='<icon-button><span class="material-symbols-outlined">search</span></icon-button>'>
+        <icon-button><span class="material-symbols-outlined">content_copy</span></icon-button><br><br>
+        <icon-button><span class="material-symbols-outlined">search</span></icon-button>
         </div>
 
         <div>
@@ -50,7 +52,7 @@
     <h4>Card Title</h4>
     <p>Card Contents</p>
 </card></textarea>
-        <icon-button><span class="material-icons">content_copy</span></icon-button><br><br>
+        <icon-button><span class="material-symbols-outlined">content_copy</span></icon-button><br><br>
         <card>
           <h4>Card Title</h4>
           <p>Card contents. Lorem ipsum dolor co la isiat. Uno la chela marcelle. Quadro una cento le parthy.</p>
@@ -60,14 +62,14 @@
         <div>
         <h3>Progress Bar</h3>
         <input type="text" value='<progress value="50" max="100">50%</progress>'>
-        <icon-button><span class="material-icons">content_copy</span></icon-button><br><br>
+        <icon-button><span class="material-symbols-outlined">content_copy</span></icon-button><br><br>
         <progress value="50" max="100">50%</progress>
         </div>
 
         <div>
         <h3>Text Input Box</h3>
         <input type="text" value='<input type="text" placeholder="Hi this is a text input box!">'>
-        <icon-button><span class="material-icons">content_copy</span></icon-button><br><br>
+        <icon-button><span class="material-symbols-outlined">content_copy</span></icon-button><br><br>
         <input type="text" placeholder="Hi this is a text input box!">
         </div>
 
@@ -81,7 +83,7 @@
     <option>Mercedes</option>
     <option>Audi</option>
 </select></textarea>
-        <icon-button><span class="material-icons">content_copy</span></icon-button><br><br>
+        <icon-button><span class="material-symbols-outlined">content_copy</span></icon-button><br><br>
         <select>
           <option>Volvo</option>
           <option>Saab</option>
@@ -93,7 +95,7 @@
         <div>
         <h3>Row</h3>
         <input type="text" value='<row></row>'>
-        <icon-button><span class="material-icons">content_copy</span></icon-button><br><br>
+        <icon-button><span class="material-symbols-outlined">content_copy</span></icon-button><br><br>
         <row style="justify-content: center;">
           <card><p>Bolt CSS made my site 1000% faster!</p></card>
           <card><p>Bolt CSS is just amazing!</p></card>
@@ -123,6 +125,26 @@
         <b><u><p>You make us what we are today!</p></u></b>
         </center>
         </div>
+        <div>
+          <h3>Dialogs</h3>
+          <p>Grab users attention with an overlay.</p>
+          <input type="text" value='<dialog></dialog>'>
+          <icon-button><span class="material-symbols-outlined">content_copy</span></icon-button><br><br>
+          <button class="medium" onclick="show_dialog('dialog_sample');">Show Dialog</button>
+          <dialog id="dialog_sample">
+            <p>This is a simple dialog with a paragraph (p) tag.</p>
+            <div class="right">
+              <button class="medium" onclick="close_dialog('dialog_sample')">Close</button>
+            </div>
+          </dialog>
+        </div>
+        <div>
+          <h3>Floating Action Button</h3>
+          <p>A sample floating button is shown in bottom-right corner.</p>
+          <input type="text" value='<button class="floating"></button>'>
+          <icon-button><span class="material-symbols-outlined">content_copy</span></icon-button><br>
+          <button class="floating medium">Floating Button</button>
+        </div>
 
       </section>
       <section>
@@ -150,8 +172,6 @@
 
         <h3>Chips</h3>
         <chip></chip>
-        <h3>Dialogs</h3>
-        <h3>Floating Action Button</h3>
         <h3>Table</h3>
       </section>
       <section id="customise">
@@ -174,5 +194,19 @@
     <footer>
       <p>© 2024 Paritosh Kumar Tripathi. All rights reserved.</p>
     </footer>
+
+    <script type="text/javascript">
+
+    function show_dialog(id) {
+      const dialog = document.getElementById(id);
+      dialog.showModal();
+      dialog.scrollTop = 0;
+    }
+
+    function close_dialog(id) {
+      const dialog = document.getElementById(id);
+      dialog.close();
+    }
+    </script>
   </body>
 </html>
