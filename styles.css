@@ -147,7 +147,7 @@ progress::-moz-progress-bar {
     background-color: var(--mainColor);
 }
 
-input[type="text"] {
+input[type="text"], input[type="time"], input[type="date"] {
     border: 1px var(--selectbgcolor) solid;
     font-family: var(--font);
     font-size: var(--baseTextSize);
@@ -155,7 +155,7 @@ input[type="text"] {
     padding: 0.5rem;
 }
 
-input[type="text"]:focus {
+input[type="text"]:focus, input[type="time"]:focus, input[type="date"]:focus {
     border: 2px var(--mainColor) solid;
 }
 
@@ -234,6 +234,24 @@ dialog {
   bottom: 0;
   margin: 2rem;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 0.5rem 1.5rem;
+}
+
+chip {
+  display: block;
+  border: 1px solid var(--selectbgcolor);
+  border-radius: var(--cornerRadius);
+  padding: 0.5em;
+  width: max-content;
+  font-size: var(--mediumTextSize);
+}
+
+chip:hover {
+    cursor: pointer;
+    background-color: var(--menuBgColor);
+}
+
+chip:active {
+    background-color: var(--selectbgcolor);
 }
 
 footer {
